@@ -4,7 +4,7 @@
     "test": "yarn fly test"
   },
   "dependencies": {
-    "@fly/cdn": "^0.4.0-0"
+    "@fly/cdn": "^0.4.0-1"
   },
   "peerDependencies": {},
   "devDependencies": {
