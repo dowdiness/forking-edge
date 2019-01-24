@@ -1,4 +1,4 @@
-import { backends, middleware, pipeline } from "@fly/cdn";
+import { backends, proxy, middleware, pipeline } from "@fly/cdn";
 
 const mw = pipeline(
   middleware.httpsUpgrader,
@@ -6,7 +6,7 @@ const mw = pipeline(
 )
 
 const app = mw(
-  backends.origin("https://getting-started.edgeapp.net")
+  proxy("https://getting-started.edgeapp.net")
 );
 
 fly.http.respondWith(app);
