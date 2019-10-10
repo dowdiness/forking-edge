@@ -6,7 +6,7 @@ const mw = pipeline(
 )
 
 const app = mw(
-  proxy("https://getting-started.edgeapp.net")
+  proxy("https://miyako-it.netlify.com")
 );
 
 fly.http.respondWith(app);
